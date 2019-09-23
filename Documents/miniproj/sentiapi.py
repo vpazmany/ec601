@@ -1,6 +1,6 @@
 from google.cloud import language_v1
 from google.cloud.language_v1 import enums
-
+import json
 
 def sample_analyze_sentiment(text_content):
     """
@@ -9,6 +9,26 @@ def sample_analyze_sentiment(text_content):
     Args:
       text_content The text content to analyze
     """
+    count_latte=0
+    avg_sum_latte=0
+
+    count_cap=0
+    avg_sum_cap=0
+
+    count_coldbrew=0
+    avg_sum_coldbrew=0
+
+    count_psl=0
+    avg_sum_psl=0
+
+    count_frappe=0
+    avg_sum_frappe=0
+
+    avg_latte=0
+    avg_cap=0
+    avg_frappe=0
+    avg_psl=0
+    avg_coldbrew=0
 
     client = language_v1.LanguageServiceClient()
 
@@ -36,14 +56,50 @@ def sample_analyze_sentiment(text_content):
     )
     # Get sentiment for all sentences in the document
     for sentence in response.sentences:
+
         print(u"Sentence text: {}".format(sentence.text.content))
         print(u"Sentence sentiment score: {}".format(sentence.sentiment.score))
         print(u"Sentence sentiment magnitude: {}".format(sentence.sentiment.magnitude))
+        if 'latte' in sentence.text.content.lower():
+            count_latte+=1
+            avg_sum_latte+= sentence.sentiment.magnitude
+            avg_latte= avg_sum_latte/count_latte
+        if 'cappucino' in sentence.text.content.lower():
+            count_cap+=1
+            avg_sum_cap+= sentence.sentiment.magnitude
+            avg_cap= avg_sum_cap/count_cap
+        if 'frappe' in sentence.text.content.lower():
+            count_frappe+=1
+            avg_sum_frappe+= sentence.sentiment.magnitude
+            avg_frappe= avg_sum_frappe/count_frappe
+        if 'cold brew' in sentence.text.content.lower():
+            count_coldbrew+=1
+            avg_sum_coldbrew+= sentence.sentiment.magnitude
+            avg_coldbrew= avg_sum_coldbrew/count_coldbrew
+        if 'pumpkin spice latte' or 'pumpkin' or 'psl' in sentence.text.content.lower():
+            count_psl+=1
+            avg_sum_psl+= sentence.sentiment.magnitude
+            avg_psl= avg_sum_psl/count_psl
 
+
+
+    print('Latte Magnitude:',avg_latte,count_latte)
+    print('Cappucino Magnitude:',avg_cap,count_cap)
+    print('Frappe Magnitude:',avg_frappe,count_frappe)
+    print('PSL Magnitude:',avg_psl, count_psl)
+    print('Coldbrew Magnitude:',avg_coldbrew, count_coldbrew)
     # Get the language of the text, which will be the same as
     # the language specified in the request or, if not specified,
     # the automatically-detected language.
     print(u"Language of the text: {}".format(response.language))
 
-example_text = "it's pumpkin spice szn!!!!! Love pumpkin spice coffee!!!"
-sample_analyze_sentiment(example_text)
+json_fname='tweet.json'#'test_coffee.json'
+json_keyword='text'
+with open(json_fname,'r') as f:
+  data = json.load(f)
+  for x in data:
+      example_text = x[json_keyword]
+      sample_analyze_sentiment(example_text)
+      #print(x['text'])
+#print(data[json_keyword])
+#example_text = data[json_keyword]#"it's pumpkin spice szn!!!!! Love pumpkin spice coffee!!!"
