@@ -2,6 +2,7 @@ from google.cloud import language_v1
 from google.cloud.language_v1 import enums
 import json
 
+
 def sample_analyze_sentiment(text_content):
     """
     Analyzing Sentiment in a String
@@ -29,6 +30,7 @@ def sample_analyze_sentiment(text_content):
     avg_frappe=0
     avg_psl=0
     avg_coldbrew=0
+
 
     client = language_v1.LanguageServiceClient()
 
@@ -76,10 +78,11 @@ def sample_analyze_sentiment(text_content):
             count_coldbrew+=1
             avg_sum_coldbrew+= sentence.sentiment.magnitude
             avg_coldbrew= avg_sum_coldbrew/count_coldbrew
-        if 'pumpkin spice latte' or 'pumpkin' or 'psl' in sentence.text.content.lower():
+        if 'pumpkin spice latte' or 'pumpkin' in sentence.text.content.lower():
             count_psl+=1
             avg_sum_psl+= sentence.sentiment.magnitude
             avg_psl= avg_sum_psl/count_psl
+
 
 
 
