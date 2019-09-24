@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ec601-miniproject-1",
+  "private_key_id": "469035d090d0fb556b26f0c09057367809c10355",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDVZCZW2k9kgiT1\n0zzqpbu8yBXYJhmvVxiYDHZd6KPLogoqaZ9dgPheXqWWnqx71cZI+D9+90rEz6R+\n9LoMC9KyW/qLGWPb2JwsdoPLEPVqzY5pf+Cuvkwss7V94o6yqlnAl3nIyGa1YzGJ\nrNFdBiv/6v7gVTr6FN19RLSA5Eg/Z7XyLCWJv3Zp0xccoDTHTkhQb/n7qiuRmiLb\ni3EPbb9quLIiJk8E2SmBqY73xl3PGdru48qvg8p8hJYwtjZ+PGS0qudaPyDFsGRq\nY7lC5P9FCRoB6WFjm4Aq8ycyUS6yHykz2fggLW/GVyV5Jq/zoxcgJchTa1+B8v2j\n3Rs2+E4RAgMBAAECggEAG1EKPWUN88JbQ+LKMgmMSmLctQJPmGwQWGqD/oqI6Ujx\nfzNtNLWNVdtM3Easst+PVgj9a93xQteH6b6fUGp1CuMOZB8Ycuy8NU7omSavHAB7\nYhL+KrBupOxOZ/KILOP0wFxDuUm6KC8uCL9IP93J5SVqgkI23gusvNv+NV/DxeXf\ngTo31OqVOXRl5lJ0DYqCxnQasAVamiq6uvdpZu4SHw5hQqt7e9SpkbvV358Wmd9p\n8/vIFCHeV5zCHEmi3o9fHy3ZdK2Ld125d3DHI32+RTci4/PORRCuqvaTh0TgtsVj\nJDYxqcR8JwsLNZSPxrMr7n/3Hx0O01y14ME2xhhnxwKBgQDuUcjtxHO5H0WGzyQz\nvN8shqUWZzkEgl19kgZe6qx9Yml/q4ydoibHNvJdEeXq6ot3taBGFcqchGduPNN5\nTvL4P7gZDLphLfXUYKNY0m/afnOlHSrny8QE2veQEt3w8kBVEJSMvZ2JiU+kbMrM\nr2QYzpr4JyPaPHtDqGcEZkHpvwKBgQDlOOwDBcZ2ucYkRnSP+FZKbjUa5gVTkGTZ\n9tY+NgrH2WS+7zs7KdgaS+SwQlYa86E8SmAIHrDxBHQw/6/th1gE6479R16xUJBC\ndzLs09isZd8Zh+nYJU7BTtDXCjMleIZa4tR1kA3w9pyLLN0a5shCFeudvuFIv6Ve\nXTIl6RKcLwKBgE02QCQQnvGeWRdJK1B74854PSpZ/RYh6opRcjD0VTg2Vzne6ar0\nqx2mBrXyo4wNu2voc2nhi4hUOXJ00Isf8gZOFqY/Am+TxW6udJ3FaCnhCDS5k3oQ\nAY0VKFoMUs3Knt8whQBoOo8h5qS9/qJ8PLDw1zKI88u0Brev6th5DOffAoGASVEV\nnDniquLsz3mBmvMRlqj9b2cXWQ0cVOMwz6E1fYq5QKEATwIpTu/ra70sEV7PuZsI\ncFBwxAZqq6l8ufrKWniFudl0Hj7ohXne3gU8jpfe7imc0DfOouH0xnNKvLd6MePP\nlPLIosQeeh2Vcx9R+mFMhZ4iLMSvvikM+zc7bp0CgYEA50R8jK4SXEUD0GvfbtRB\nphbIhptcO9sJBHWCIVJ2mJE4bRVPAf9s8W065OruYb64JozFIWkb/77NWjye/fXy\nh0lbk+k8Z5Hu/JR9tQkKG9eTC9YOJY7ve/jCbuu51NDXhfydtqoxcE6OEqOrLWzF\n531FmQhCWwkwuhCXwnfIJ6M=\n-----END PRIVATE KEY-----\n",
+  "client_email": "nlp-vivian@ec601-miniproject-1.iam.gserviceaccount.com",
+  "client_id": "108131132909545539819",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nlp-vivian%40ec601-miniproject-1.iam.gserviceaccount.com"
+}
