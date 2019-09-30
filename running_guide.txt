@@ -30,3 +30,5 @@ export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
 For example:
 
 export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/[FILE_NAME].json"
+
+execute "python sentiapi.py" to test program.
