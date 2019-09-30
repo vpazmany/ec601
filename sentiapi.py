@@ -42,6 +42,7 @@ def sample_analyze_sentiment(text_content_list):
     avg_coldbrew=0
 
     for g in range(0,15):#len(text_content_list)):
+        print(g)
         text_content=text_content_list[g]
         client = language_v1.LanguageServiceClient()
 
@@ -75,7 +76,7 @@ def sample_analyze_sentiment(text_content_list):
             if 'latte' in sentence.text.content.lower():
                 count_latte+=1
                 avg_sum_latte= sentence.sentiment.magnitude
-                avg_sum_latte+=avg_sum_latte/count_latte
+                avg_latte+=avg_sum_latte/count_latte
             if 'cappucino' in sentence.text.content.lower():
                 count_cap+=1
                 avg_sum_cap+= sentence.sentiment.magnitude
