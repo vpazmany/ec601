@@ -41,7 +41,7 @@ def sample_analyze_sentiment(text_content_list):
     avg_psl=0
     avg_coldbrew=0
 
-    for g in range(0,len(text_content_list)):
+    for g in range(0,15):#len(text_content_list)):
         text_content=text_content_list[g]
         client = language_v1.LanguageServiceClient()
 
@@ -69,7 +69,6 @@ def sample_analyze_sentiment(text_content_list):
         )
         # Get sentiment for all sentences in the document
         for sentence in response.sentences:
-
             print(u"Sentence text: {}".format(sentence.text.content))
             print(u"Sentence sentiment score: {}".format(sentence.sentiment.score))
             print(u"Sentence sentiment magnitude: {}".format(sentence.sentiment.magnitude))
@@ -270,10 +269,12 @@ if __name__ == '__main__':
     json_fname='tweet.json'#'test_coffee.json'
     json_keyword='text'
     example_text=[]
+
     with open(json_fname,'r') as f:
       data = json.load(f)
       for x in data:
           example_text += [x[json_keyword]]
+
     sample_analyze_sentiment(example_text)
       #print(x['text'])
 #print(data[json_keyword])
